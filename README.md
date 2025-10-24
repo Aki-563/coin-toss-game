@@ -1,6 +1,5 @@
-akileshcointoss.ccbp.tech
+[Open Coin Toss Game](https://akileshcointoss.ccbp.tech)
 
-Copy and paste the URL in your browser.
 -----------------------------------------
 
 App Highlights:
