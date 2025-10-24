@@ -1,0 +1,308 @@
+.mainContainer {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to right, #f9d423, #e2a139);
+}
+.subContainer {
+  border: none;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  background-color: white;
+  width: 50%;
+  height: fit-content;
+  text-align: center;
+}
+
+.normalButton {
+  padding: 12px;
+  font-size: 15px;
+  background-color: #f8e271;
+  color: #d08f27;
+  border: none;
+  border-radius: 10px;
+  font-weight: bold;
+  margin: 20px;
+  cursor: pointer;
+}
+.darkButton {
+  padding: 12px;
+  font-size: 15px;
+  background-color: #d08f27;
+  color: #f8e271;
+  border: none;
+  border-radius: 10px;
+  font-weight: bold;
+  margin: 20px;
+  cursor: pointer;
+}
+.disabledButton {
+  padding: 12px;
+  font-size: 15px;
+  background-color: #c9c9c9;
+  color: #b3b3b3;
+  border: none;
+  border-radius: 10px;
+  font-weight: bold;
+  margin: 20px;
+  cursor: not-allowed;
+}
+.details {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.img {
+  width: 150px;
+  transition: transform 0.7s;
+}
+
+.spin {
+  animation: spinCoin 0.7s linear;
+}
+
+@keyframes spinCoin {
+  0% {
+    transform: rotateY(0deg);
+  }
+  100% {
+    transform: rotateY(720deg);
+  }
+}
+.imgC {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 160px;
+  height: 160px;
+}
+.img {
+  width: 150px;
+  height: 150px;
+  transition: transform 0.7s;
+}
+.yellow {
+  color: #d08f27;
+  font-weight: bold;
+}
+.bottomText {
+  opacity: 0.1;
+  margin: 0;
+  padding: 0;
+}
+.buttonContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.secButton {
+  padding: 10px;
+  font-size: 15px;
+  background-color: transparent;
+  color: #d08f27;
+  border: solid;
+  border-radius: 10px;
+  font-weight: normal;
+  margin: 0;
+  border-width: 2px;
+  cursor: pointer;
+}
+
+.darkModeToggle {
+  width: 30px;
+  height: 30px;
+  align-self: flex-end;
+  cursor: pointer;
+  margin: 0;
+}
+
+.dark {
+  background-color: rgb(26, 26, 26);
+  color: black;
+}
+.white {
+  color: white;
+}
+.ultraDark {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+}
+* {
+  font-family: 'Open Sans';
+}
+.secButtonLight {
+  color: #d08f27;
+  background-color: transparent;
+  border: solid;
+  padding: 8px;
+  border-radius: 10px;
+  font-weight: normal;
+  margin: 15px;
+  border-width: 1px;
+  cursor: pointer;
+}
+.secButtonDark {
+  padding: 8px;
+  background-color: transparent;
+  color: #f8e271;
+  border: solid;
+  border-color: #d08f27;
+  border-radius: 10px;
+  font-weight: normal;
+  margin: 15px;
+  border-width: 1px;
+  cursor: pointer;
+}
+.green {
+  color: rgb(0, 193, 0);
+  font-weight: bold;
+}
+
+.red {
+  color: rgb(255, 54, 54);
+  font-weight: bold;
+}
+.bold {
+  font-weight: bold;
+}
+
+.midContainer {
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.paraCont {
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+}
+.buttonCont {
+  display: flex;
+  height: 100px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.chooseTextDark {
+  color: white;
+}
+chooseTextLight {
+  color: black;
+}
+
+/* RESPONSIVE DESIGN STARTS HERE */
+@media (max-width: 1024px) {
+  .subContainer {
+    width: 70%;
+    padding: 30px;
+  }
+
+  .img {
+    width: 130px;
+    height: 130px;
+  }
+
+  .normalButton,
+  .darkButton,
+  .disabledButton {
+    font-size: 14px;
+    padding: 10px;
+    margin: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .subContainer {
+    width: 85%;
+    padding: 25px;
+  }
+
+  .midContainer,
+  .paraCont,
+  .buttonCont {
+    height: auto;
+  }
+
+  h1 {
+    font-size: 22px;
+  }
+
+  .img {
+    width: 120px;
+    height: 120px;
+  }
+
+  .buttonContainer {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .details {
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+  }
+
+  .darkModeToggle {
+    width: 25px;
+    height: 25px;
+  }
+}
+
+@media (max-width: 480px) {
+  .mainContainer,
+  .ultraDark {
+    height: auto;
+    padding: 20px 0;
+  }
+
+  .subContainer {
+    width: 90%;
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 20px;
+  }
+
+  .img {
+    width: 100px;
+    height: 100px;
+  }
+
+  .normalButton,
+  .darkButton,
+  .disabledButton,
+  .secButton,
+  .secButtonLight,
+  .secButtonDark {
+    font-size: 13px;
+    padding: 8px;
+  }
+
+  .details {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .bottomText {
+    font-size: 12px;
+    margin-top: 10px;
+  }
+}
+/* RESPONSIVE DESIGN ENDS HERE */
